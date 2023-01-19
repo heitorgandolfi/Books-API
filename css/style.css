@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.main__title{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    padding: 80px 32px;
+}
+
+.list div h2 {
+    font-size: 18px;
+    max-width: 300px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.list div img {
+    opacity: .1;
+    cursor: pointer;
+}
+
+.list div img:hover {
+    opacity: 1;
+}
