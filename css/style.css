@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.main__title{
+.main__title {
     text-align: center;
     margin-top: 40px;
 }
@@ -34,4 +34,72 @@
 
 .list div img:hover {
     opacity: 1;
+}
+
+/* MODAL */
+
+.modal__container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 900px;
+    width: 95%;
+}
+
+.modal__content {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    padding: 32px;
+
+}
+
+.modal__content img {
+    margin-top: 12px;
+    max-width: 240px;
+    box-shadow: 0px 0px 14px 0px rgba(0, 0, 0, 0.25);
+}
+
+.modal__first__infos h5 {
+    font-weight: 500;
+    color: #494949;
+}
+
+.modal__second__infos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: start;
+}
+
+.modal__second__infos h3,
+p,
+.modal__second__infos h5 {
+    font-weight: 400;
+    font-size: clamp(16px, 4vw, 18px);
+}
+
+.modal__second__infos ul {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    list-style: none;
+    gap: 12px;
+    font-size: 14px;
+}
+
+.modal__second__infos ul li a {
+    text-decoration: none;
+    color: #2181db;
+}
+
+span {
+    font-weight: 600;
 }

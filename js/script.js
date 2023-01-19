@@ -16,12 +16,12 @@ const showMatches = async () => {
     const datas = data.results
 
     for (i = 0; i <= datas.books.length - 1; i++) {
-        const divContainer = document.querySelector(".list");
-        const divContent = document.createElement("div");
+        const divContainer = document.querySelector(".list"); // Container que engloba todas as divs dos livros.
+        const divContent = document.createElement("div"); // Divs dos livros em si, contendo título deles e img.
         const h2 = document.createElement("h2");
         const img = document.createElement("img");
 
-        divContainer.appendChild(divContent);
+        divContainer?.appendChild(divContent);
         divContent.appendChild(h2);
         divContent.appendChild(img);
 
