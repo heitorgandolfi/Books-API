@@ -29,25 +29,36 @@ const showData = async () => {
 
 showData();
 
-// Elementos do modal
+// Modal
 
 const showModal = async () => {
     const data = await getData();
     const datas = data.results;
 
-    const modalContainer = document.querySelector(".modal__container");
     const imgs = Array.from(document.getElementsByTagName("img"));
-    const title = document.querySelector(".modal__title");
+
+    const modalContainer = document.querySelector(".modal__container");
+    const modalTitle = document.querySelector(".modal__title");
+    const modalImg = document.querySelector(".modal__img");
+    const modalRank = document.querySelector(".modal__rank");
+    const modalLwRank = document.querySelector(".modal__lw__rank");
+    const modalAuthor = document.querySelector(".modal__author");
+    const modalSynopsis = document.querySelector(".modal__synopsis");
+    const modalPublisher = document.querySelector(".modal__publisher");
 
     for (let i = 0; i <= imgs.length - 1; i++) {
         imgs[i].addEventListener("click", () => {
             modalContainer.style.display = "flex";
-            title.innerHTML = `${datas.books[i].title}`;
+            modalTitle.innerHTML = `${datas.books[i].title}`;
+            modalImg.src = `${datas.books[i].book_image}`;
+            modalRank.innerHTML = `#${datas.books[i].rank}`;
+            modalLwRank.innerHTML = `(Last Week: ${datas.books[i].rank_last_week} | Weeks on List: ${datas.books[i].weeks_on_list})`;
+            modalAuthor.innerHTML = `<span>Author:</span> ${datas.books[i].author}`;
+            modalSynopsis.innerHTML = `<span>Synopsis:</span> ${datas.books[i].description}`;
+            modalPublisher.innerHTML = `<span>Publisher:</span> ${datas.books[i].publisher}`;
         })
     }
 
 }
 
-showModal()
-
-
+showModal();
