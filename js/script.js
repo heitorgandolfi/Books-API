@@ -12,6 +12,10 @@ const getData = async () => {
 const showData = async () => {
     const data = await getData();
     const datas = data.results;
+
+    const refDate = document.querySelector(".ref__date");
+    refDate.innerHTML = `Reference date: ${datas.bestsellers_date}`
+
     for (let i = 0; i <= datas.books.length - 1; i++) {
         const divContainer = document.querySelector(".list"); // Container que engloba todas as divs dos livros.
         const divContent = document.createElement("div"); // Divs dos livros em si, contendo título deles e img.
@@ -51,7 +55,7 @@ const showModal = async () => {
             modalContainer.style.display = "flex";
             modalTitle.innerHTML = `${datas.books[i].title}`;
             modalImg.src = `${datas.books[i].book_image}`;
-            modalRank.innerHTML = `#${datas.books[i].rank}`;
+            modalRank.innerHTML = `Rank #${datas.books[i].rank}`;
             modalLwRank.innerHTML = `(Last Week: ${datas.books[i].rank_last_week} | Weeks on List: ${datas.books[i].weeks_on_list})`;
             modalAuthor.innerHTML = `<span>Author:</span> ${datas.books[i].author}`;
             modalSynopsis.innerHTML = `<span>Synopsis:</span> ${datas.books[i].description}`;
