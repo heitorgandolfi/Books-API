@@ -27,19 +27,23 @@ const showData = async () => {
     }
 }
 
+showData();
+
 // Elementos do modal
 
 const showModal = async () => {
-    const data = await showData();
+    const data = await getData();
+    const datas = data.results;
 
     const modalContainer = document.querySelector(".modal__container");
     const imgs = Array.from(document.getElementsByTagName("img"));
     const title = document.querySelector(".modal__title");
 
     for (let i = 0; i <= imgs.length - 1; i++) {
-        imgs[i].addEventListener("click", () =>
-            alert(`${i}`)
-        )
+        imgs[i].addEventListener("click", () => {
+            modalContainer.style.display = "flex";
+            title.innerHTML = `${datas.books[i].title}`;
+        })
     }
 
 }
@@ -47,5 +51,3 @@ const showModal = async () => {
 showModal()
 
 
-// modalContainer.style.display = "flex";
-// title.innerHTML = `${datas.books[i].title}`;
