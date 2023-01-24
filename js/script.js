@@ -15,8 +15,8 @@ const showData = async () => {
 
     const refDate = document.querySelector(".ref__date");
     const locale = 'pt-br';
-    const newRefDate = new Date(`${datas.bestsellers_date}`).toLocaleDateString(locale)
-    refDate.innerHTML = `Reference date: ${newRefDate}`
+    const newRefDate = new Date(`${datas.bestsellers_date}`).toLocaleDateString(locale);
+    refDate.innerHTML = `Reference date: ${newRefDate}`;
 
     for (let i = 0; i <= datas.books.length - 1; i++) {
         const divContainer = document.querySelector(".list"); // Container que engloba todas as divs dos livros.
@@ -52,8 +52,8 @@ const showModal = async () => {
     const modalSynopsis = document.querySelector(".modal__synopsis");
     const modalPublisher = document.querySelector(".modal__publisher");
     const closeModal = document.querySelector(".close__modal");
-    
-    closeModal.addEventListener("click", () => { modalContainer.style.display = "none"; })
+
+    closeModal.addEventListener("click", () => { modalContainer.style.display = "none" });
 
     for (let i = 0; i <= imgs.length - 1; i++) {
         imgs[i].addEventListener("click", () => {
