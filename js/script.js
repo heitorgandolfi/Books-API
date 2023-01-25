@@ -14,9 +14,8 @@ const showData = async () => {
     const datas = data.results;
 
     const refDate = document.querySelector(".ref__date");
-    const locale = 'pt-br';
-    const newRefDate = new Date(`${datas.bestsellers_date}`).toLocaleDateString(locale);
-    refDate.innerHTML = `Reference date: ${newRefDate}`;
+    const ptBrDate = datas.bestsellers_date.split("-").reverse().join("/");
+    refDate.innerHTML = `Reference date: ${ptBrDate}`;
 
     for (let i = 0; i <= datas.books.length - 1; i++) {
         const divContainer = document.querySelector(".list"); // Container que engloba todas as divs dos livros.
