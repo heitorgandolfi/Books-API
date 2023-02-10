@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>Books API</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <h1 class="main__title">Hardcover Fiction</h1>
     <h2 class="sub__title">Best Sellers</h2>
     <h4 class="ref__date"></h4>
+
+    <h1 class="preloader"></h1>
     <div class="list"></div>
 
     <article class="modal__container">
-        <section class="modal__content">
-            <i class="close__modal">X</i>
-            <div class="modal__first__infos">
-                <h3 class="modal__title"></h3>
-                <img src="" alt="Capa do Livro" class="modal__img">
-                <h4 class="modal__rank"></h4>
-                <h5 class="modal__lw__rank"></h5>
-            </div>
-            <div class="modal__second__infos">
-                <h3 class="modal__author"></h3>
-                <p class="modal__synopsis"></p>
-                <h5 class="modal__publisher"></h5>
-            </div>
-        </section>
+      <section class="modal__content">
+        <i class="close__modal">X</i>
+        <div class="modal__first__infos">
+          <h3 class="modal__title"></h3>
+          <img src="" alt="Capa do Livro" class="modal__img" />
+          <h4 class="modal__rank"></h4>
+          <h5 class="modal__lw__rank"></h5>
+        </div>
+        <div class="modal__second__infos">
+          <h3 class="modal__author"></h3>
+          <p class="modal__synopsis"></p>
+          <h5 class="modal__publisher"></h5>
+        </div>
+      </section>
     </article>
 
     <script src="./js/script.js"></script>
-</body>
-
+  </body>
 </html>
